@@ -13,13 +13,11 @@ module "jenkins" {
   }
 
   #Define the root volume size and type
-  root_block_device = [
-    {
-      volume_size           = 50
-      volume_type           = "gp3"
-      delete_on_termination = true
-    }
-  ]
+  root_block_device = {
+    volume_size           = 50
+    volume_type           = "gp3"
+    delete_on_termination = true
+  }
 }
 
 module "jenkins_agent" {
@@ -37,13 +35,11 @@ module "jenkins_agent" {
   }
 
   #Define the root volume size and type
-  root_block_device = [
-    {
-      volume_size           = 50
-      volume_type           = "gp3"
-      delete_on_termination = true
-    }
-  ]
+  root_block_device = {
+    volume_size           = 50
+    volume_type           = "gp3"
+    delete_on_termination = true
+  }
 }
 
 module "records" {
