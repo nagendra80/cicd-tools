@@ -73,7 +73,7 @@
 
 
 resource "aws_instance" "jenkins" {
-  ami                    = data.aws_ami.joindevops.id
+  ami                    = data.aws_ami.ami_info.id
   instance_type          = "t3.micro"
   vpc_security_group_ids = ["sg-024ec5f8fa4a072d9"]
   subnet_id              = "subnet-05f59ca6e3314cc9e"
@@ -89,7 +89,7 @@ resource "aws_instance" "jenkins" {
 }
 
 resource "aws_instance" "jenkins-agent" {
-  ami                    = data.aws_ami.joindevops.id
+  ami                    = data.aws_ami.ami_info.id
   instance_type          = "t3.micro"
   vpc_security_group_ids = ["sg-024ec5f8fa4a072d9"]
   subnet_id              = "subnet-05f59ca6e3314cc9e"
