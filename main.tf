@@ -119,11 +119,11 @@ resource "aws_route53_record" "jenkins_agent" {
   ttl     = 1
   records = [aws_instance.jenkins-agent.private_ip]
 }
-resource "aws_route53_record" "jenkins_private" {
-  count   = aws_instance.jenkins.private_ip != "" ? 1 : 0
-  zone_id = var.zone_id
-  name    = "jenkins-private"
-  type    = "A"
-  ttl     = 1
-  records = [aws_instance.jenkins.private_ip]
-}
+# resource "aws_route53_record" "jenkins_private" {
+#   count   = aws_instance.jenkins.private_ip != "" ? 1 : 0
+#   zone_id = var.zone_id
+#   name    = "jenkins-private"
+#   type    = "A"
+#   ttl     = 1
+#   records = [aws_instance.jenkins.private_ip]
+# }
