@@ -84,7 +84,7 @@ resource "aws_instance" "jenkins" {
     volume_type = "gp3"  # Use gp3 for better performance (optional)
   }
   tags = {
-    name = "jenkins"
+    Name = "jenkins"
   }
 }
 
@@ -100,7 +100,7 @@ resource "aws_instance" "jenkins-agent" {
     volume_type = "gp3"  # Use gp3 for better performance (optional)
   }
   tags = {
-    name = "jenkins-agent"
+    Name = "jenkins-agent"
   }
 }
 
